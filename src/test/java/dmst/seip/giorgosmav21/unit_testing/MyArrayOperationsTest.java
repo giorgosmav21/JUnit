@@ -31,8 +31,10 @@ public class MyArrayOperationsTest {
 		//setting the array
 		int[] array = {3,4,5,7,0,9,6,2,0,0,2,8,0,0,4,10};
 		
+		int[] frequencies = {5,0,2,1,2,1,1,1,1,1,1};
+		
 		when(mfu.readFile("src/test/resources/grades.txt")).thenReturn(array);
 		
-		Assert.assertArrayEquals(array, mao.gradesFrequencies("src/test/recourses/grades", mfu));
+		Assert.assertArrayEquals(frequencies, mao.gradesFrequencies("src/test/resources/grades.txt", mfu));
 	}
 }

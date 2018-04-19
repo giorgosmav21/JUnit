@@ -52,4 +52,9 @@ public class MyFileUtilitiesTest {
 		thrown.expect(IllegalArgumentException.class);
 		mfu.readFile("incorrect_path");
 	}
+	@Test
+	public void no_path() throws Exception {
+		thrown.expect(IllegalArgumentException.class);
+		mfu.readFile("");
+	}
 }
